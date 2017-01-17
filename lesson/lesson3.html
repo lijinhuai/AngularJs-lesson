@@ -3,22 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.js"></script>
-    <div ng-app="" ng-init="persons=[
+    <style>
+        #gossip{
+            box-sizing: border-box;
+            position: relative;
+            top:50%;
+            left:50%;
+            width:200px;
+            height:200px;
+            margin:0 0 0 -100px;
+            border-radius: 50%;
+            background-image: linear-gradient(0deg,black 50%,white 50%);
+            box-shadow: 5px 5px 60px #666fff;
+            transition: all 6s ease-in-out;
+        }
+
+        #gossip:before{
+            content: "";
+            display: block;
+            position:absolute;
+            width:15%;
+            height:15%;
+            left:0;
+            top:25%;
+            border-radius: 50%;
+            border-width: 35px;
+            border-width: 35px;
+            border-style: solid;
+            background: #fff;
+        }
+
+        #gossip:after{
+            content: "";
+            display: block;
+            position:absolute;
+            width:15%;
+            height:15%;
+            top:25%;
+            right:0;
+            border-radius: 50%;
+            border-width: 35px;
+            border-style: solid;
+            border-color: #fff;
+            background: #000;
+        }
+        #gossip:hover{
+            transform: rotate(360deg);
+        }
+    </style>
+
+</head>
+<body>
+<div ng-app="" ng-init="persons=[
                             {name:'jhon',age:'11'},
                             {name:'hello',age:'20'}
                             ]">
 
-        <ul>
-            <li ng-repeat="x in  persons">
-                姓名{{x.name}}
-                年龄{{x.age}}
-            </li>
-        </ul>
+    <ul>
+        <li ng-repeat="x in  persons">
+            姓名{{x.name}}
+            年龄{{x.age}}
+        </li>
+    </ul>
 
-    </div>
-</head>
-<body>
+</div>
 
+<div id="gossip">
+
+</div>
 </body>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.js"></script>
 </html>
