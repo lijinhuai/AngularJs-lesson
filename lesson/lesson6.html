@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        input.ng-invalid{
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body ng-app="" >
+<form name="myForm">
+<input type="email" name="myEmail" ng-model="text1">
+    <span ng-show="myForm.myEmail.$error.email">不是一个合法的email</span>
+</form>
+
+<form ng-init="myEmail2='123@qq.com'" name="myForm2">
+    email:<input type="email" name="myEmail2" ng-model="myEmail2" required>
+    {{myForm2.myEmail2.$valid}}
+    {{myForm2.myEmail2.$dirty}}
+    {{myForm2.myEmail2.$touched}}
+    {{myForm2.myEmail2.$error.email}}
+</form>
+
+<form name="myForm3">
+    <input type="text" ng-model="text2" required>
+</form>
+
+</body>
+<script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.js"></script>
+<script>
+
+</script>
+</html>
