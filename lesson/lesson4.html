@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div ng-app="myApp">
+        <cyber-directive></cyber-directive>
+    </div>
+
+</body>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.js"></script>
+    <script>
+        var app = angular.module("myApp",[]);
+        app.directive("cyberDirective",function(){
+            return {
+                template:"<h1>自定义指令！</h1>"
+            };
+        });
+    </script>
+</html>
