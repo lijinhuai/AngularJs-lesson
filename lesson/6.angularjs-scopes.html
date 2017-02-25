@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://apps.bdimg.com/libs/angular.js/1.5.0-beta.0/angular.js"></script>
+</head>
+<body ng-app="myApp">
+
+<div ng-include="'http://c.runoob.com/runoobtest/angular_include.php'"></div>
+
+<script>
+    var app = angular.module('myApp', [])
+    app.config(function($sceDelegateProvider) {
+        $sceDelegateProvider.resourceUrlWhitelist([
+            'http://c.runoob.com/runoobtest/**'
+        ]);
+    });
+</script>
+
+</body>
+
+
+</body>
+</html>
